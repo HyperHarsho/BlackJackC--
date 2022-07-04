@@ -415,7 +415,7 @@ void App::game()
                 print();
                 break;
             default:
-                cout<<"Enter correct ininsert(HIT or STAND)."<<endl;
+                cout<<"Enter correct input(H or S)."<<endl;
                 continue;
             }
             turn++;
