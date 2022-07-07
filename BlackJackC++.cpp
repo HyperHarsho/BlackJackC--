@@ -397,8 +397,8 @@ void App::game()
         switch (turn)
         {
         case 0:
-            cout<<"Do you want to HIT or STAND?"<<endl;
-            cin>>c;
+            cout << "Do you want to HIT or STAND?" << endl;
+            cin >> c;
             c = tolower(c);
             natural = true;
             switch (c)
@@ -410,12 +410,12 @@ void App::game()
                 print();
                 break;
             case 's':
-                cout<<"You stand"<<endl;
+                cout << "You stand" << endl;
                 count();
                 print();
                 break;
             default:
-                cout<<"Enter correct input(H or S)."<<endl;
+                cout << "Enter correct input(H or S)." << endl;
                 continue;
             }
             turn++;
@@ -425,16 +425,16 @@ void App::game()
             count();
             if (dealerCount > playerCount)
             {
-                cout<<"The dealer stands"<<endl;
+                cout << "The dealer stands" << endl;
             }
             else
             {
-                cout<<"The dealer hits"<<endl;
+                cout << "The dealer hits" << endl;
                 if (deck.front() == 'A')
                 {
                     if (!(11 + dealerCount > 21))
                     {
-                        cards.insert(pair<char,int>('A', 11));
+                        cards.insert(pair<char, int>('A', 11));
                     }
                 }
                 dealerHand.push_back(deck.front());
